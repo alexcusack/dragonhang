@@ -7,7 +7,7 @@ module DragonhangController
 		DragonHangView.hangman
 		View.welcome
 		#Take name
-		name = gets.chomp
+		$name = gets.chomp
 		#Pick a word
 		$answer = DragonhangController.pick_word
 		#Display # of guesses
@@ -15,12 +15,10 @@ module DragonhangController
 		#Print gallows
 		DragonHangView.guess7
 		#Print blanks
-		blanks = Array.new($answer.length) {"_ "}
-		View.print_blanks(blanks.join)
-		#Take guess
-
-		#Check guess
-		#Add limb
+		$blanks = Array.new($answer.length) {"_ "}
+		View.print_blanks($blanks.join)
+		#Check guesses
+		DragonhangController.guesser
 		#Win/loss
 	end
 
@@ -36,23 +34,33 @@ module DragonhangController
 
 	def self.guesser
 		number_of_guesses = 7
-		until blanks.include?("_") == false || number_of_guesses == 0
+		until $blanks.include?("_ ") == false || number_of_guesses == 0
 			View.take_guess
-			DragonhangController.check_guess ? next : number_of_guesses -=1
-			View.guesses_remaining(name,number_of_guesses)
+			guess = DragonhangController.check_guess
+			if guess 
+				View.print_blanks($blanks.join)
+			else	
+				number_of_guesses -=1
+			end
+			round = "DragonHangView.guess#{number_of_guesses}"
+			eval(round)
+			View.guesses_remaining($name,number_of_guesses)
 		end
-
+		View.you_win if $blanks.include?("_ ") == false
+		View.game_over if number_of_guesses == 0
 	end
 
 	def self.check_guess
 		guess = gets.chomp
-		answer_array = $answer.split
-		answer_array.each_with_index |letter, index|
+		found = false
+		answer_array = $answer.split('')
+		answer_array.each_with_index do |letter, index|
 			if letter == guess.downcase
-				blanks[index] = "#{letter.upcase} "
-				return true
+				$blanks[index] = "#{letter.upcase} "
+				found = true
 			end
 		end
+		return found
 	end
 
 
