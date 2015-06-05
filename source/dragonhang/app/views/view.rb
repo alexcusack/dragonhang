@@ -16,6 +16,11 @@ module View
 		puts
 	end
 
+	def self.show_leaderboard(table)
+		table.each_with_index{|user, index| puts "#{index+1}. #{user.name}: #{user.points}"}
+	end
+
+
 	def self.take_guess
 		print "Guess a letter: "
 	end

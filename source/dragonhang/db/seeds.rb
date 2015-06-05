@@ -7,6 +7,6 @@ nicknames.each do |word|
 end
 
 
-20.times do
-  User.create(name: Faker::Name.name)
-end
+# 20.times do
+#   User.create(name: Faker::Name.name, points: 0)
+# end
