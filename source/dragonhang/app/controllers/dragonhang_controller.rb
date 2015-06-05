@@ -18,7 +18,6 @@ module DragonhangController
 		$blanks = Array.new($answer.length) {"_ "}
 		View.print_blanks($blanks.join)
 		#Take guess
-		View.take_guess
 		DragonhangController.guesser
 		#Check guess
 		#Add limb
@@ -37,24 +36,29 @@ module DragonhangController
 
 	def self.guesser
 		number_of_guesses = 7
-		until $blanks.include?("_") == false || number_of_guesses == 0
-			#View.take_guess
+		until $blanks.include?("_ ") == false || number_of_guesses == 0
+			View.take_guess
 			guess = DragonhangController.check_guess
-			p guess
-			guess ? next : number_of_guesses -=1
+			if guess 
+				View.print_blanks($blanks.join)
+			else	
+				number_of_guesses -=1
+			end
 			View.guesses_remaining(name,number_of_guesses)
 		end
 	end
 
 	def self.check_guess
 		guess = gets.chomp
-		answer_array = $answer.split
+		found = false
+		answer_array = $answer.split('')
 		answer_array.each_with_index do |letter, index|
 			if letter == guess.downcase
 				$blanks[index] = "#{letter.upcase} "
-				return true
+				found = true
 			end
 		end
+		return found
 	end
 
 
