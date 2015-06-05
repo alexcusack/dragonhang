@@ -1,7 +1,7 @@
 require 'rake'
 require 'rspec/core/rake_task'
 
-require_relative 'config/application'
+require_relative '../dragonhang/config/application'
 
 class String
   def strip_heredoc

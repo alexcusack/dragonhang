@@ -1,9 +1,12 @@
 require 'faker'
 
-30.times do
-  Task.create(description: Faker::Lorem.sentence, list_id:(1..5).to_a.sample)
+nicknames = ["Vizard","Kharessi","White Pearl","Vizard","Vivek","Kharessi","Banana","Shaggy","Dragon","Admiral Iron Finger","Sexy Saxman","Jacuzzi","Captain Planet","Wild Card","Buffalo King","Black widow","Tasty","Kasanova","Momma Bear","Jenga","El Presidente"]
+
+nicknames.each do |word|
+  Word.create(word: word)
 end
 
-5.times do
-  List.create(name: Faker::Company.name)
+
+20.times do
+  User.create(name: Faker::Name.name)
 end
