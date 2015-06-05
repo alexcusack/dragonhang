@@ -26,6 +26,10 @@ module View
 	end
 
 	def self.your_guesses(guesses)
-		puts "#{guesses.uniq.join(" ")}"
+		puts "Your previous guesses: #{guesses.uniq.join(" ")}"
+	end
+
+	def self.duplicate_guess
+		puts "You already guessed that!"
 	end
 end
