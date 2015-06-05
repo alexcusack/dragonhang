@@ -1,5 +1,5 @@
-require_relative '../views/view'
-require_relative '../views/hangman_view'
+require_relative '../../config/application.rb'
+
 module DragonhangController
 
 	def self.run
@@ -15,7 +15,7 @@ module DragonhangController
 		#Print gallows
 		DragonHangView.guess7
 		#Print blanks
-		$blanks = Array.new($answer.length) {"_ "}
+		$blanks = Array.new($answer.word.length) {"_ "}
 		View.print_blanks($blanks.join)
 		#Check guesses
 		DragonhangController.guesser
@@ -27,9 +27,9 @@ module DragonhangController
 	end
 
 	def self.pick_word
-		"spaghetti"
-	  # rand_id = rand(Word.count)
-	  # rand_record = Word.find(rand_id)
+		# "spaghetti"
+	  rand_id = rand(Word.count)
+	  rand_record = Word.find(rand_id)
 	end
 
 	def self.guesser
@@ -55,7 +55,7 @@ module DragonhangController
 			DragonhangController.check_guess
 		else
 			found = false
-			answer_array = $answer.split('')
+			answer_array = $answer.word.split('')
 			answer_array.each_with_index do |letter, index|
 				$guesses << guess
 				if letter == guess.downcase
