@@ -15,7 +15,7 @@ module DragonHangView
     puts "                                 `.__."
   end
 
-  def self.stage1
+  def self.guess7
     puts " ____________________"
     puts "| .__________________|"
     puts "| | / /      "
@@ -41,7 +41,7 @@ module DragonHangView
     puts ". .                   . ."
   end
 
-  def self.stage2
+  def self.guess6
     puts " ___________.._______"
     puts "| .__________))______|"
     puts "| | / /      ||"
@@ -67,7 +67,7 @@ module DragonHangView
     puts ". .                   . ."
   end
 
-  def self.stage4
+  def self.guess5
     puts " ___________.._______"
     puts "| .__________))______|"
     puts "| | / /      ||"
@@ -93,7 +93,7 @@ module DragonHangView
     puts ". .                   . ."
   end
 
-  def self.stage5
+  def self.guess4
     puts " ___________.._______"
     puts "| .__________))______|"
     puts "| | / /      ||"
@@ -119,7 +119,7 @@ module DragonHangView
     puts ". .                   . ."
   end
 
-  def self.stage6
+  def self.guess3
     puts " ___________.._______"
     puts "| .__________))______|"
     puts "| | / /      ||"
@@ -145,7 +145,7 @@ module DragonHangView
     puts ". .                   . ."
   end
 
-  def self.stage7
+  def self.guess2
     puts " ___________.._______"
     puts "| .__________))______|"
     puts "| | / /      ||"
@@ -171,7 +171,7 @@ module DragonHangView
     puts ". .                   . ."
   end
 
-  def self.stage8
+  def self.guess1
     puts " ___________.._______"
     puts "| .__________))______|"
     puts "| | / /      ||"
@@ -197,7 +197,7 @@ module DragonHangView
     puts ". .                   . ."
   end
 
-  def self.dead
+  def self.guess0
     puts " ___________.._______"
     puts "| .__________))______|"
     puts "| | / /      ||"
@@ -224,5 +224,3 @@ module DragonHangView
   end
 
 end
-
-DragonHangView.hangman
