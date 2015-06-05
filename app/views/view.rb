@@ -44,9 +44,9 @@ module View
 
 	def self.game_over(answer)
 		DragonHangView.game_over
-		puts "The answer was #{answer}"
 		50.times {print "*"}
 		puts
 		DragonHangView.guess0
+		puts "The answer was #{answer}"
 	end
 end
