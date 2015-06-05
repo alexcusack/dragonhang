@@ -3,20 +3,98 @@ require 'colorize'
 module DragonHangView
   def self.hangman
     puts "\e[H\e[2J"
-    puts " ___"
-    puts "(   )"
-    puts " | | .-.     .---.   ___ .-.     .--.    ___ .-. .-.     .---.   ___ .-."
-    puts " | |/   \\   / .-, \\ (   )   \\   /    \\  (   )   '   \\   / .-, \\ (   )   \\"
-    puts " |  .-. .  (__) ; |  |  .-. .  ;  ,-. '  |  .-.  .-. ; (__) ; |  |  .-. ."
-    puts " | |  | |    .'`  |  | |  | |  | |  | |  | |  | |  | |   .'`  |  | |  | |"
-    puts " | |  | |   / .'| |  | |  | |  | |  | |  | |  | |  | |  / .'| |  | |  | |"
-    puts " | |  | |  | /  | |  | |  | |  | |  | |  | |  | |  | | | /  | |  | |  | |"
-    puts " | |  | |  ; |  ; |  | |  | |  | '  | |  | |  | |  | | ; |  ; |  | |  | |"
-    puts " | |  | |  ' `-'  |  | |  | |  '  `-' |  | |  | |  | | ' `-'  |  | |  | |"
-    puts "(___)(___) `.__.'_. (___)(___)  `.__. | (___)(___)(___)`.__.'_. (___)(___)"
-    puts "                                ( `-' ;"
-    puts "                                 `.__."
+    puts "     ___                                                     ___".colorize(:red)
+    puts "    (   )                                                   (   )".colorize(:red)
+    puts "  .-.| |   ___ .-.      .---.    .--.     .--.    ___ .-.    | | .-.     .---.   ___ .-.     .--.".colorize(:red)
+    puts " /   \\ |  (   )   \\    / .-, \\  /    \\   /    \\  (   )   \\   | |/   \\   / .-, \\ (   )   \\   /    \\".colorize(:red)
+    puts "|  .-. |   | ' .-. ;  (__) ; | ;  ,-. ' |  .-. ;  |  .-. .   |  .-. .  (__) ; |  |  .-. .  ;  ,-. '".colorize(:red)
+    puts "| |  | |   |  / (___)   .'`  | | |  | | | |  | |  | |  | |   | |  | |    .'`  |  | |  | |  | |  | |".colorize(:red)
+    puts "| |  | |   | |         / .'| | | |  | | | |  | |  | |  | |   | |  | |   / .'| |  | |  | |  | |  | |".colorize(:red)
+    puts "| |  | |   | |        | /  | | | |  | | | |  | |  | |  | |   | |  | |  | /  | |  | |  | |  | |  | |".colorize(:red)
+    puts "| '  | |   | |        ; |  ; | | '  | | | '  | |  | |  | |   | |  | |  ; |  ; |  | |  | |  | '  | |".colorize(:red)
+    puts "' `-'  /   | |        ' `-'  | '  `-' | '  `-' /  | |  | |   | |  | |  ' `-'  |  | |  | |  '  `-' |".colorize(:red)
+    puts " `.__,'   (___)       `.__.'_.  `.__. |  `.__.'  (___)(___) (___)(___) `.__.'_. (___)(___)  `.__. |".colorize(:red)
+    puts "                                ( `-' ;                                                     ( `-' ;".colorize(:red)
+    puts "                                 `.__.                                                       `.__.".colorize(:red)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts "     ___                                                     ___".colorize(:blue)
+    puts "    (   )                                                   (   )".colorize(:blue)
+    puts "  .-.| |   ___ .-.      .---.    .--.     .--.    ___ .-.    | | .-.     .---.   ___ .-.     .--.".colorize(:blue)
+    puts " /   \\ |  (   )   \\    / .-, \\  /    \\   /    \\  (   )   \\   | |/   \\   / .-, \\ (   )   \\   /    \\".colorize(:blue)
+    puts "|  .-. |   | ' .-. ;  (__) ; | ;  ,-. ' |  .-. ;  |  .-. .   |  .-. .  (__) ; |  |  .-. .  ;  ,-. '".colorize(:blue)
+    puts "| |  | |   |  / (___)   .'`  | | |  | | | |  | |  | |  | |   | |  | |    .'`  |  | |  | |  | |  | |".colorize(:blue)
+    puts "| |  | |   | |         / .'| | | |  | | | |  | |  | |  | |   | |  | |   / .'| |  | |  | |  | |  | |".colorize(:blue)
+    puts "| |  | |   | |        | /  | | | |  | | | |  | |  | |  | |   | |  | |  | /  | |  | |  | |  | |  | |".colorize(:blue)
+    puts "| '  | |   | |        ; |  ; | | '  | | | '  | |  | |  | |   | |  | |  ; |  ; |  | |  | |  | '  | |".colorize(:blue)
+    puts "' `-'  /   | |        ' `-'  | '  `-' | '  `-' /  | |  | |   | |  | |  ' `-'  |  | |  | |  '  `-' |".colorize(:blue)
+    puts " `.__,'   (___)       `.__.'_.  `.__. |  `.__.'  (___)(___) (___)(___) `.__.'_. (___)(___)  `.__. |".colorize(:blue)
+    puts "                                ( `-' ;                                                     ( `-' ;".colorize(:blue)
+    puts "                                 `.__.                                                       `.__.".colorize(:blue)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts "     ___                                                     ___".colorize(:red)
+    puts "    (   )                                                   (   )".colorize(:red)
+    puts "  .-.| |   ___ .-.      .---.    .--.     .--.    ___ .-.    | | .-.     .---.   ___ .-.     .--.".colorize(:red)
+    puts " /   \\ |  (   )   \\    / .-, \\  /    \\   /    \\  (   )   \\   | |/   \\   / .-, \\ (   )   \\   /    \\".colorize(:red)
+    puts "|  .-. |   | ' .-. ;  (__) ; | ;  ,-. ' |  .-. ;  |  .-. .   |  .-. .  (__) ; |  |  .-. .  ;  ,-. '".colorize(:red)
+    puts "| |  | |   |  / (___)   .'`  | | |  | | | |  | |  | |  | |   | |  | |    .'`  |  | |  | |  | |  | |".colorize(:red)
+    puts "| |  | |   | |         / .'| | | |  | | | |  | |  | |  | |   | |  | |   / .'| |  | |  | |  | |  | |".colorize(:red)
+    puts "| |  | |   | |        | /  | | | |  | | | |  | |  | |  | |   | |  | |  | /  | |  | |  | |  | |  | |".colorize(:red)
+    puts "| '  | |   | |        ; |  ; | | '  | | | '  | |  | |  | |   | |  | |  ; |  ; |  | |  | |  | '  | |".colorize(:red)
+    puts "' `-'  /   | |        ' `-'  | '  `-' | '  `-' /  | |  | |   | |  | |  ' `-'  |  | |  | |  '  `-' |".colorize(:red)
+    puts " `.__,'   (___)       `.__.'_.  `.__. |  `.__.'  (___)(___) (___)(___) `.__.'_. (___)(___)  `.__. |".colorize(:red)
+    puts "                                ( `-' ;                                                     ( `-' ;".colorize(:red)
+    puts "                                 `.__.                                                       `.__.".colorize(:red)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts "     ___                                                     ___".colorize(:blue)
+    puts "    (   )                                                   (   )".colorize(:blue)
+    puts "  .-.| |   ___ .-.      .---.    .--.     .--.    ___ .-.    | | .-.     .---.   ___ .-.     .--.".colorize(:blue)
+    puts " /   \\ |  (   )   \\    / .-, \\  /    \\   /    \\  (   )   \\   | |/   \\   / .-, \\ (   )   \\   /    \\".colorize(:blue)
+    puts "|  .-. |   | ' .-. ;  (__) ; | ;  ,-. ' |  .-. ;  |  .-. .   |  .-. .  (__) ; |  |  .-. .  ;  ,-. '".colorize(:blue)
+    puts "| |  | |   |  / (___)   .'`  | | |  | | | |  | |  | |  | |   | |  | |    .'`  |  | |  | |  | |  | |".colorize(:blue)
+    puts "| |  | |   | |         / .'| | | |  | | | |  | |  | |  | |   | |  | |   / .'| |  | |  | |  | |  | |".colorize(:blue)
+    puts "| |  | |   | |        | /  | | | |  | | | |  | |  | |  | |   | |  | |  | /  | |  | |  | |  | |  | |".colorize(:blue)
+    puts "| '  | |   | |        ; |  ; | | '  | | | '  | |  | |  | |   | |  | |  ; |  ; |  | |  | |  | '  | |".colorize(:blue)
+    puts "' `-'  /   | |        ' `-'  | '  `-' | '  `-' /  | |  | |   | |  | |  ' `-'  |  | |  | |  '  `-' |".colorize(:blue)
+    puts " `.__,'   (___)       `.__.'_.  `.__. |  `.__.'  (___)(___) (___)(___) `.__.'_. (___)(___)  `.__. |".colorize(:blue)
+    puts "                                ( `-' ;                                                     ( `-' ;".colorize(:blue)
+    puts "                                 `.__.                                                       `.__.".colorize(:blue)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts "     ___                                                     ___".colorize(:red)
+    puts "    (   )                                                   (   )".colorize(:red)
+    puts "  .-.| |   ___ .-.      .---.    .--.     .--.    ___ .-.    | | .-.     .---.   ___ .-.     .--.".colorize(:red)
+    puts " /   \\ |  (   )   \\    / .-, \\  /    \\   /    \\  (   )   \\   | |/   \\   / .-, \\ (   )   \\   /    \\".colorize(:red)
+    puts "|  .-. |   | ' .-. ;  (__) ; | ;  ,-. ' |  .-. ;  |  .-. .   |  .-. .  (__) ; |  |  .-. .  ;  ,-. '".colorize(:red)
+    puts "| |  | |   |  / (___)   .'`  | | |  | | | |  | |  | |  | |   | |  | |    .'`  |  | |  | |  | |  | |".colorize(:red)
+    puts "| |  | |   | |         / .'| | | |  | | | |  | |  | |  | |   | |  | |   / .'| |  | |  | |  | |  | |".colorize(:red)
+    puts "| |  | |   | |        | /  | | | |  | | | |  | |  | |  | |   | |  | |  | /  | |  | |  | |  | |  | |".colorize(:red)
+    puts "| '  | |   | |        ; |  ; | | '  | | | '  | |  | |  | |   | |  | |  ; |  ; |  | |  | |  | '  | |".colorize(:red)
+    puts "' `-'  /   | |        ' `-'  | '  `-' | '  `-' /  | |  | |   | |  | |  ' `-'  |  | |  | |  '  `-' |".colorize(:red)
+    puts " `.__,'   (___)       `.__.'_.  `.__. |  `.__.'  (___)(___) (___)(___) `.__.'_. (___)(___)  `.__. |".colorize(:red)
+    puts "                                ( `-' ;                                                     ( `-' ;".colorize(:red)
+    puts "                                 `.__.                                                       `.__.".colorize(:red)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts "     ___                                                     ___"
+    puts "    (   )                                                   (   )"
+    puts "  .-.| |   ___ .-.      .---.    .--.     .--.    ___ .-.    | | .-.     .---.   ___ .-.     .--."
+    puts " /   \\ |  (   )   \\    / .-, \\  /    \\   /    \\  (   )   \\   | |/   \\   / .-, \\ (   )   \\   /    \\"
+    puts "|  .-. |   | ' .-. ;  (__) ; | ;  ,-. ' |  .-. ;  |  .-. .   |  .-. .  (__) ; |  |  .-. .  ;  ,-. '"
+    puts "| |  | |   |  / (___)   .'`  | | |  | | | |  | |  | |  | |   | |  | |    .'`  |  | |  | |  | |  | |"
+    puts "| |  | |   | |         / .'| | | |  | | | |  | |  | |  | |   | |  | |   / .'| |  | |  | |  | |  | |"
+    puts "| |  | |   | |        | /  | | | |  | | | |  | |  | |  | |   | |  | |  | /  | |  | |  | |  | |  | |"
+    puts "| '  | |   | |        ; |  ; | | '  | | | '  | |  | |  | |   | |  | |  ; |  ; |  | |  | |  | '  | |"
+    puts "' `-'  /   | |        ' `-'  | '  `-' | '  `-' /  | |  | |   | |  | |  ' `-'  |  | |  | |  '  `-' |"
+    puts " `.__,'   (___)       `.__.'_.  `.__. |  `.__.'  (___)(___) (___)(___) `.__.'_. (___)(___)  `.__. |"
+    puts "                                ( `-' ;                                                     ( `-' ;"
+    puts "                                 `.__.                                                       `.__."
+
   end
+
+
 
   def self.guess7
     puts "\e[H\e[2J"
@@ -775,6 +853,87 @@ sleep 0.1
     puts "    $$ |     $$$$$$  |\\$$$$$$  |      $$  /   \\$$ |$$$$$$\\ $$ | \\$$ |".colorize(:white)
     puts "    \\__|     \\______/  \\______/       \\__/     \\__|\\______|\\__|  \\__|".colorize(:white)
 sleep 0.1
+ end
+ def game_over
+    puts "\e[H\e[2J"
+    puts " e88~~\\       e           e    e      888~~          ,88~-_   Y88b      / 888~~  888~-_".colorize(:magenta)
+    puts "d888         d8b         d8b  d8b     888___        d888   \\   Y88b    /  888___ 888   \\".colorize(:magenta)
+    puts "8888 __     /Y88b       d888bdY88b    888          88888    |   Y88b  /   888    888    |".colorize(:magenta)
+    puts "8888   |   /  Y88b     / Y88Y Y888b   888          88888    |    Y888/    888    888   /".colorize(:magenta)
+    puts "Y888   |  /____Y88b   /   YY   Y888b  888           Y888   /      Y8/     888    888_-~".colorize(:magenta)
+    puts " \"88__/  /      Y88b /          Y888b 888___         `88_-~        Y      888___ 888 ~-_".colorize(:magenta)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts " e88~~\\       e           e    e      888~~          ,88~-_   Y88b      / 888~~  888~-_".colorize(:red)
+    puts "d888         d8b         d8b  d8b     888___        d888   \\   Y88b    /  888___ 888   \\".colorize(:red)
+    puts "8888 __     /Y88b       d888bdY88b    888          88888    |   Y88b  /   888    888    |".colorize(:red)
+    puts "8888   |   /  Y88b     / Y88Y Y888b   888          88888    |    Y888/    888    888   /".colorize(:red)
+    puts "Y888   |  /____Y88b   /   YY   Y888b  888           Y888   /      Y8/     888    888_-~".colorize(:red)
+    puts " \"88__/  /      Y88b /          Y888b 888___         `88_-~        Y      888___ 888 ~-_".colorize(:red)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts " e88~~\\       e           e    e      888~~          ,88~-_   Y88b      / 888~~  888~-_".colorize(:magenta)
+    puts "d888         d8b         d8b  d8b     888___        d888   \\   Y88b    /  888___ 888   \\".colorize(:magenta)
+    puts "8888 __     /Y88b       d888bdY88b    888          88888    |   Y88b  /   888    888    |".colorize(:magenta)
+    puts "8888   |   /  Y88b     / Y88Y Y888b   888          88888    |    Y888/    888    888   /".colorize(:magenta)
+    puts "Y888   |  /____Y88b   /   YY   Y888b  888           Y888   /      Y8/     888    888_-~".colorize(:magenta)
+    puts " \"88__/  /      Y88b /          Y888b 888___         `88_-~        Y      888___ 888 ~-_".colorize(:magenta)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts " e88~~\\       e           e    e      888~~          ,88~-_   Y88b      / 888~~  888~-_".colorize(:red)
+    puts "d888         d8b         d8b  d8b     888___        d888   \\   Y88b    /  888___ 888   \\".colorize(:red)
+    puts "8888 __     /Y88b       d888bdY88b    888          88888    |   Y88b  /   888    888    |".colorize(:red)
+    puts "8888   |   /  Y88b     / Y88Y Y888b   888          88888    |    Y888/    888    888   /".colorize(:red)
+    puts "Y888   |  /____Y88b   /   YY   Y888b  888           Y888   /      Y8/     888    888_-~".colorize(:red)
+    puts " \"88__/  /      Y88b /          Y888b 888___         `88_-~        Y      888___ 888 ~-_".colorize(:red)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts " e88~~\\       e           e    e      888~~          ,88~-_   Y88b      / 888~~  888~-_".colorize(:magenta)
+    puts "d888         d8b         d8b  d8b     888___        d888   \\   Y88b    /  888___ 888   \\".colorize(:magenta)
+    puts "8888 __     /Y88b       d888bdY88b    888          88888    |   Y88b  /   888    888    |".colorize(:magenta)
+    puts "8888   |   /  Y88b     / Y88Y Y888b   888          88888    |    Y888/    888    888   /".colorize(:magenta)
+    puts "Y888   |  /____Y88b   /   YY   Y888b  888           Y888   /      Y8/     888    888_-~".colorize(:magenta)
+    puts " \"88__/  /      Y88b /          Y888b 888___         `88_-~        Y      888___ 888 ~-_".colorize(:magenta)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts " e88~~\\       e           e    e      888~~          ,88~-_   Y88b      / 888~~  888~-_".colorize(:red)
+    puts "d888         d8b         d8b  d8b     888___        d888   \\   Y88b    /  888___ 888   \\".colorize(:red)
+    puts "8888 __     /Y88b       d888bdY88b    888          88888    |   Y88b  /   888    888    |".colorize(:red)
+    puts "8888   |   /  Y88b     / Y88Y Y888b   888          88888    |    Y888/    888    888   /".colorize(:red)
+    puts "Y888   |  /____Y88b   /   YY   Y888b  888           Y888   /      Y8/     888    888_-~".colorize(:red)
+    puts " \"88__/  /      Y88b /          Y888b 888___         `88_-~        Y      888___ 888 ~-_".colorize(:red)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts " e88~~\\       e           e    e      888~~          ,88~-_   Y88b      / 888~~  888~-_".colorize(:magenta)
+    puts "d888         d8b         d8b  d8b     888___        d888   \\   Y88b    /  888___ 888   \\".colorize(:magenta)
+    puts "8888 __     /Y88b       d888bdY88b    888          88888    |   Y88b  /   888    888    |".colorize(:magenta)
+    puts "8888   |   /  Y88b     / Y88Y Y888b   888          88888    |    Y888/    888    888   /".colorize(:magenta)
+    puts "Y888   |  /____Y88b   /   YY   Y888b  888           Y888   /      Y8/     888    888_-~".colorize(:magenta)
+    puts " \"88__/  /      Y88b /          Y888b 888___         `88_-~        Y      888___ 888 ~-_".colorize(:magenta)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts " e88~~\\       e           e    e      888~~          ,88~-_   Y88b      / 888~~  888~-_".colorize(:red)
+    puts "d888         d8b         d8b  d8b     888___        d888   \\   Y88b    /  888___ 888   \\".colorize(:red)
+    puts "8888 __     /Y88b       d888bdY88b    888          88888    |   Y88b  /   888    888    |".colorize(:red)
+    puts "8888   |   /  Y88b     / Y88Y Y888b   888          88888    |    Y888/    888    888   /".colorize(:red)
+    puts "Y888   |  /____Y88b   /   YY   Y888b  888           Y888   /      Y8/     888    888_-~".colorize(:red)
+    puts " \"88__/  /      Y88b /          Y888b 888___         `88_-~        Y      888___ 888 ~-_".colorize(:red)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts " e88~~\\       e           e    e      888~~          ,88~-_   Y88b      / 888~~  888~-_".colorize(:magenta)
+    puts "d888         d8b         d8b  d8b     888___        d888   \\   Y88b    /  888___ 888   \\".colorize(:magenta)
+    puts "8888 __     /Y88b       d888bdY88b    888          88888    |   Y88b  /   888    888    |".colorize(:magenta)
+    puts "8888   |   /  Y88b     / Y88Y Y888b   888          88888    |    Y888/    888    888   /".colorize(:magenta)
+    puts "Y888   |  /____Y88b   /   YY   Y888b  888           Y888   /      Y8/     888    888_-~".colorize(:magenta)
+    puts " \"88__/  /      Y88b /          Y888b 888___         `88_-~        Y      888___ 888 ~-_".colorize(:magenta)
+    sleep 0.1
+    puts "\e[H\e[2J"
+    puts " e88~~\\       e           e    e      888~~          ,88~-_   Y88b      / 888~~  888~-_".colorize(:red)
+    puts "d888         d8b         d8b  d8b     888___        d888   \\   Y88b    /  888___ 888   \\".colorize(:red)
+    puts "8888 __     /Y88b       d888bdY88b    888          88888    |   Y88b  /   888    888    |".colorize(:red)
+    puts "8888   |   /  Y88b     / Y88Y Y888b   888          88888    |    Y888/    888    888   /".colorize(:red)
+    puts "Y888   |  /____Y88b   /   YY   Y888b  888           Y888   /      Y8/     888    888_-~".colorize(:red)
+    puts " \"88__/  /      Y88b /          Y888b 888___         `88_-~        Y      888___ 888 ~-_".colorize(:red)
  end
 
 end
