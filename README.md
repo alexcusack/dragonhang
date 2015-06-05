@@ -2,6 +2,10 @@
 
 Clone the repo to your computer.
 
+```
+git clone ...
+```
+
 Run bundle
 ``` 
 bundle
