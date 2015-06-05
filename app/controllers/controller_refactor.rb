@@ -15,7 +15,8 @@ class RefactoredController
     View.welcome
     get_user_name
     start_game
-    get_guess_loop
+    View.print_blanks(@blanks.join)
+    get_guess
     end_game
     leader_board
   end
@@ -25,7 +26,7 @@ class RefactoredController
     View.show_leaderboard(table)
   end
 
-  def get_guess_loop
+  def get_guess
       until @blanks.include?("_ ") == false || @guess_count == 0
       View.take_guess
       guess = check_guess
