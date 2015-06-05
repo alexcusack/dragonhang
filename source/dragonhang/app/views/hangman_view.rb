@@ -854,7 +854,7 @@ sleep 0.1
     puts "    \\__|     \\______/  \\______/       \\__/     \\__|\\______|\\__|  \\__|".colorize(:white)
 sleep 0.1
  end
- def game_over
+ def self.game_over
     puts "\e[H\e[2J"
     puts " e88~~\\       e           e    e      888~~          ,88~-_   Y88b      / 888~~  888~-_".colorize(:magenta)
     puts "d888         d8b         d8b  d8b     888___        d888   \\   Y88b    /  888___ 888   \\".colorize(:magenta)
