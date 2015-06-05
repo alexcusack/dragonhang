@@ -8,6 +8,7 @@ require_relative '../app/views/view'
 require_relative '../app/views/hangman_view'
 require_relative '../app/models/word'
 require_relative '../app/models/User'
+require_relative '../app/controllers/controller_refactor'
 
 
 APP_ROOT = Pathname.new(File.expand_path(File.join(File.dirname(__FILE__), '..')))
