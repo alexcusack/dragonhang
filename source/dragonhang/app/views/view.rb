@@ -17,6 +17,10 @@ module View
 	end
 
 	def self.show_leaderboard(table)
+		50.times {print "*"}
+		puts
+		puts "Leaderboard!"
+		puts
 		table.each_with_index{|user, index| puts "#{index+1}. #{user.name}: #{user.points}"}
 	end
 
@@ -43,5 +47,6 @@ module View
 		puts "The answer was #{answer}"
 		50.times {print "*"}
 		puts
+		DragonHangView.guess0
 	end
 end
