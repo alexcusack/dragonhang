@@ -2,6 +2,7 @@ require 'colorize'
 
 module DragonHangView
   def self.hangman
+    puts "\e[H\e[2J"
     puts " ___"
     puts "(   )"
     puts " | | .-.     .---.   ___ .-.     .--.    ___ .-. .-.     .---.   ___ .-."
@@ -180,6 +181,7 @@ module DragonHangView
   end
 
   def self.guess1
+    puts "\e[H\e[2J"
     puts " ___________.._______"
     puts "| .__________))______|"
     puts "| | / /      ||"
@@ -232,7 +234,7 @@ module DragonHangView
     puts ". .          `'       . ."
   end
 
- def self.youwin
+ def self.you_win
     puts "\e[H\e[2J"
     puts "                      .-.".colorize(:blue)
     puts "                     ()I()".colorize(:green)

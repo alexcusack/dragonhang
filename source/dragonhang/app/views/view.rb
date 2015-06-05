@@ -32,4 +32,11 @@ module View
 	def self.duplicate_guess
 		puts "You already guessed that!"
 	end
+
+	def self.game_over
+		50.times {print "*"}
+		puts
+		puts "GAME OVER"
+		puts
+	end
 end

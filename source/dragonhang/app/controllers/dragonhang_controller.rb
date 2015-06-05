@@ -38,13 +38,14 @@ module DragonhangController
 		until $blanks.include?("_ ") == false || number_of_guesses == 0
 			View.take_guess
 			guess = DragonhangController.check_guess
-			guess ? View.print_blanks($blanks.join) : number_of_guesses -=1
+			number_of_guesses -=1 if guess == false
 			round = "DragonHangView.guess#{number_of_guesses}"
 			eval(round)
 			View.guesses_remaining($name,number_of_guesses)
 			View.your_guesses($guesses)
+			View.print_blanks($blanks.join) 
 		end
-		View.you_win if $blanks.include?("_ ") == false
+		DragonHangView.you_win if $blanks.include?("_ ") == false
 		View.game_over if number_of_guesses == 0
 	end
 
