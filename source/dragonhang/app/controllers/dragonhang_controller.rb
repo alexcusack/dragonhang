@@ -46,7 +46,7 @@ module DragonhangController
 			View.print_blanks($blanks.join) 
 		end
 		DragonHangView.you_win if $blanks.include?("_ ") == false
-		View.game_over if number_of_guesses == 0
+		View.game_over($answer) if number_of_guesses == 0
 	end
 
 	def self.check_guess

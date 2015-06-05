@@ -33,10 +33,12 @@ module View
 		puts "You already guessed that!"
 	end
 
-	def self.game_over
+	def self.game_over(answer)
 		50.times {print "*"}
 		puts
 		puts "GAME OVER"
+		puts "The answer was #{answer}"
+		50.times {print "*"}
 		puts
 	end
 end
