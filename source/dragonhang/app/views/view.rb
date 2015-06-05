@@ -8,7 +8,7 @@ module View
 	def self.guesses_remaining(name,number_of_guesses)
 		50.times {print "*"}
 		puts
-		puts "You have 6 guesses, #{name}."
+		puts "You have #{number_of_guesses} guesses left, #{name}."
 	end
 
 	def self.print_blanks(blanks)
@@ -18,5 +18,14 @@ module View
 
 	def self.take_guess
 		print "Guess a letter: "
+	end
+
+	def self.invalid_guess
+		print "Please enter a valid letter: "
+		puts
+	end
+
+	def self.your_guesses(guesses)
+		puts "#{guesses.uniq.join(" ")}"
 	end
 end
