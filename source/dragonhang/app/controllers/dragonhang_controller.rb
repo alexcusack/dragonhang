@@ -1,23 +1,24 @@
 require_relative '../views/view'
+require_relative '../views/hangman_view'
 module DragonhangController
 
 	def self.run
 		#Welcome
+		DragonHangView.hangman
 		View.welcome
 		#Take name
 		name = gets.chomp
 		#Pick a word
-		answer = DragonhangController.pick_word
+		$answer = DragonhangController.pick_word
 		#Display # of guesses
-		number_of_guesses = 7
-		View.guesses_remaining(name,number_of_guesses)
+
 		#Print gallows
-		View.print_gallows(number_of_guesses)
+		DragonHangView.guess7
 		#Print blanks
-		blanks = Array.new(answer.length) {"_ "}
+		blanks = Array.new($answer.length) {"_ "}
 		View.print_blanks(blanks.join)
 		#Take guess
-		until word
+
 		#Check guess
 		#Add limb
 		#Win/loss
@@ -34,9 +35,26 @@ module DragonhangController
 	end
 
 	def self.guesser
-		View.take_guess
-		guess = gets.chomp
+		number_of_guesses = 7
+		until blanks.include?("_") == false || number_of_guesses == 0
+			View.take_guess
+			DragonhangController.check_guess ? next : number_of_guesses -=1
+			View.guesses_remaining(name,number_of_guesses)
+		end
+
 	end
+
+	def self.check_guess
+		guess = gets.chomp
+		answer_array = $answer.split
+		answer_array.each_with_index |letter, index|
+			if letter == guess.downcase
+				blanks[index] = "#{letter.upcase} "
+				return true
+			end
+		end
+	end
+
 
 end
 

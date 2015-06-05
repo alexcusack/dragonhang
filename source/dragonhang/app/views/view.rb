@@ -11,10 +11,6 @@ module View
 		puts "You have 6 guesses, #{name}."
 	end
 
-	def self.print_gallows(number_of_guesses)
-
-	end
-
 	def self.print_blanks(blanks)
 		print blanks
 		puts
