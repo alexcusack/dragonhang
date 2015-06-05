@@ -53,6 +53,9 @@ module DragonhangController
 		if guess.length != 1
 			View.invalid_guess
 			DragonhangController.check_guess
+		elsif $guesses.include?(guess)
+			View.duplicate_guess
+			DragonhangController.check_guess
 		else
 			found = false
 			answer_array = $answer.split('')
