@@ -7,7 +7,7 @@ module DragonhangController
 		DragonHangView.hangman
 		View.welcome
 		#Take name
-		name = gets.chomp
+		$name = gets.chomp
 		#Pick a word
 		$answer = DragonhangController.pick_word
 		#Display # of guesses
@@ -17,10 +17,8 @@ module DragonhangController
 		#Print blanks
 		$blanks = Array.new($answer.length) {"_ "}
 		View.print_blanks($blanks.join)
-		#Take guess
+		#Check guesses
 		DragonhangController.guesser
-		#Check guess
-		#Add limb
 		#Win/loss
 	end
 
@@ -44,8 +42,12 @@ module DragonhangController
 			else	
 				number_of_guesses -=1
 			end
-			View.guesses_remaining(name,number_of_guesses)
+			round = "DragonHangView.guess#{number_of_guesses}"
+			eval(round)
+			View.guesses_remaining($name,number_of_guesses)
 		end
+		View.you_win if $blanks.include?("_ ") == false
+		View.game_over if number_of_guesses == 0
 	end
 
 	def self.check_guess
