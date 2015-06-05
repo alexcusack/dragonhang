@@ -2,8 +2,9 @@ require 'pathname'
 require 'sqlite3'
 require 'active_record'
 require 'logger'
+# require_relative "/db/nicknames.txt"
+# require_relative "../db/seeds.rb"
 
-p "I'm in application"
 
 APP_ROOT = Pathname.new(File.expand_path(File.join(File.dirname(__FILE__), '..')))
 
